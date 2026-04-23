@@ -1,12 +1,16 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function VehicleCard({ veicolo }) {
-  const { marca, modello, anno, km, prezzo, cilindrata, tipo, immagini } =
+  const { id, marca, modello, anno, km, prezzo, cilindrata, tipo, immagini } =
     veicolo;
   const hasImage = immagini && immagini.length > 0;
 
   return (
-    <div className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow border border-gray-100 group flex flex-col">
+    <Link
+      href={`/vetrina/${id}`}
+      className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow border border-gray-100 group flex flex-col"
+    >
       {/* Image */}
       <div className="relative h-52 bg-gray-100 overflow-hidden shrink-0">
         {hasImage ? (
@@ -45,14 +49,11 @@ export default function VehicleCard({ veicolo }) {
           <span className="text-2xl font-black text-[#E8000E]">
             €{Number(prezzo).toLocaleString("it-IT")}
           </span>
-          <a
-            href="tel:+39XXXXXXXXXX"
-            className="bg-[#111111] text-white text-sm font-semibold px-4 py-2 rounded-full hover:bg-[#E8000E] transition-colors"
-          >
-            Contattaci
-          </a>
+          <span className="bg-[#111111] text-white text-sm font-semibold px-4 py-2 rounded-full group-hover:bg-[#E8000E] transition-colors">
+            Scopri di più
+          </span>
         </div>
       </div>
-    </div>
+    </Link>
   );
 }

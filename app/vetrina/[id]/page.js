@@ -134,7 +134,7 @@ export default function VeicoloDetailPage() {
             </div>
 
             {/* Info */}
-            <div className="flex flex-col">
+            <div>
               <h1 className="text-3xl font-black text-[#111111] leading-tight">
                 {veicolo.marca} {veicolo.modello}
               </h1>
@@ -159,29 +159,21 @@ export default function VeicoloDetailPage() {
               </dl>
 
               {/* Descrizione */}
-              {veicolo.descrizione && (
-                <div className="mt-6">
-                  <h2 className="text-xs font-bold uppercase tracking-widest text-gray-400 mb-2">Descrizione</h2>
-                  <p className="text-gray-600 leading-relaxed whitespace-pre-line text-sm">
-                    {veicolo.descrizione}
-                  </p>
-                </div>
-              )}
+              <div className="mt-6">
+                <h2 className="text-xs font-bold uppercase tracking-widest text-gray-400 mb-2">Descrizione</h2>
+                <p className="text-gray-600 leading-relaxed whitespace-pre-line text-sm">
+                  {veicolo.descrizione?.trim() || "Nessuna descrizione disponibile."}
+                </p>
+              </div>
 
               {/* CTA */}
-              <div className="mt-auto pt-8 flex flex-col sm:flex-row gap-3">
+              <div className="mt-8">
                 <a
                   href="tel:+39XXXXXXXXXX"
-                  className="flex-1 bg-[#E8000E] text-white text-center font-bold py-3.5 rounded-full hover:bg-red-700 transition-colors"
+                  className="block w-full bg-[#E8000E] text-white text-center font-bold py-3.5 rounded-full hover:bg-red-700 transition-colors"
                 >
                   📞 Chiama per info
                 </a>
-                <Link
-                  href="/tagliando"
-                  className="flex-1 bg-[#111111] text-white text-center font-bold py-3.5 rounded-full hover:bg-gray-800 transition-colors"
-                >
-                  Prenota tagliando
-                </Link>
               </div>
             </div>
           </div>

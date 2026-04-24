@@ -24,7 +24,7 @@ export default function Header() {
               alt="UC Motors"
               width={200}
               height={60}
-              className="h-9 w-auto md:h-11"
+              className="h-12 w-auto md:h-14"
               priority
             />
           </Link>

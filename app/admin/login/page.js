@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { supabase } from "@/lib/supabase";
 
@@ -33,13 +34,15 @@ export default function AdminLoginPage() {
       <div className="w-full max-w-sm">
         {/* Logo */}
         <div className="text-center mb-10">
-          <div className="inline-flex items-baseline gap-0.5 mb-3">
-            <span className="text-5xl font-black text-white tracking-tighter">
-              UC
-            </span>
-            <span className="text-xl font-bold italic text-[#E8000E] tracking-widest uppercase ml-1">
-              motors
-            </span>
+          <div className="flex justify-center mb-3">
+            <Image
+              src="/logo.png"
+              alt="UC Motors"
+              width={200}
+              height={60}
+              className="h-16 w-auto"
+              priority
+            />
           </div>
           <p className="text-gray-500 text-sm">Area amministrativa</p>
         </div>

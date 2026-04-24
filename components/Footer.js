@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Footer() {
   return (
@@ -7,13 +8,14 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           {/* Brand */}
           <div>
-            <div className="flex items-baseline gap-0.5 mb-4">
-              <span className="text-3xl font-black text-white tracking-tighter">
-                UC
-              </span>
-              <span className="text-sm font-bold italic text-[#E8000E] tracking-widest uppercase ml-1">
-                motors
-              </span>
+            <div className="mb-4">
+              <Image
+                src="/logo.png"
+                alt="UC Motors"
+                width={200}
+                height={60}
+                className="h-12 w-auto"
+              />
             </div>
             <p className="text-gray-400 text-sm leading-relaxed">
               Di Umberto Carrà

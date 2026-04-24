@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
 import { supabase } from "@/lib/supabase";
 
@@ -23,11 +24,14 @@ export default function AdminShell({ children }) {
       {/* Sidebar desktop */}
       <aside className="w-60 bg-[#111111] text-white shrink-0 hidden lg:flex flex-col fixed h-full">
         <div className="p-6 border-b border-white/10">
-          <Link href="/" className="flex items-baseline gap-0.5">
-            <span className="text-3xl font-black tracking-tighter">UC</span>
-            <span className="text-sm font-bold italic text-[#E8000E] tracking-widest uppercase ml-1">
-              motors
-            </span>
+          <Link href="/">
+            <Image
+              src="/logo.png"
+              alt="UC Motors"
+              width={200}
+              height={60}
+              className="h-11 w-auto"
+            />
           </Link>
           <p className="text-gray-500 text-xs mt-1.5 font-medium uppercase tracking-widest">
             Admin
@@ -99,14 +103,13 @@ export default function AdminShell({ children }) {
       <div className="flex-1 flex flex-col min-h-screen lg:ml-60 pb-16 lg:pb-0">
         {/* Mobile header */}
         <header className="lg:hidden bg-white border-b border-gray-200 px-4 py-4 flex items-center justify-between">
-          <div className="flex items-baseline gap-0.5">
-            <span className="text-2xl font-black text-[#111111] tracking-tighter">
-              UC
-            </span>
-            <span className="text-sm font-bold italic text-[#E8000E] tracking-widest uppercase ml-1">
-              motors
-            </span>
-          </div>
+          <Image
+            src="/logo.png"
+            alt="UC Motors"
+            width={200}
+            height={60}
+            className="h-10 w-auto"
+          />
           <button
             onClick={handleLogout}
             className="text-xs text-gray-500 hover:text-gray-800"

@@ -169,7 +169,7 @@ export default function VeicoloDetailPage() {
               {/* CTA */}
               <div className="mt-8">
                 <a
-                  href="tel:+39XXXXXXXXXX"
+                  href="tel:+393921642318"
                   className="block w-full bg-[#E8000E] text-white text-center font-bold py-3.5 rounded-full hover:bg-red-700 transition-colors"
                 >
                   📞 Chiama per info

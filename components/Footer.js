@@ -32,21 +32,20 @@ export default function Footer() {
             <ul className="space-y-2 text-sm text-gray-400">
               <li>
                 <a
-                  href="tel:+39XXXXXXXXXX"
+                  href="tel:+393921642318"
                   className="hover:text-white transition-colors"
                 >
-                  📞 +39 XXX XXX XXXX
+                  📞 +39 392 164 2318
                 </a>
               </li>
               <li>
                 <a
-                  href="mailto:info@ucmotors.it"
+                  href="mailto:Umbertocarra@icloud.com"
                   className="hover:text-white transition-colors"
                 >
-                  ✉️ info@ucmotors.it
+                  ✉️ Umbertocarra@icloud.com
                 </a>
               </li>
-              <li>📍 Via Esempio, 1 — Napoli</li>
             </ul>
           </div>
 

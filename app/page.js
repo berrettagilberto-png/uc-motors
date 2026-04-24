@@ -4,6 +4,8 @@ import Footer from "@/components/Footer";
 import VehicleCard from "@/components/VehicleCard";
 import { supabase } from "@/lib/supabase";
 
+export const dynamic = "force-dynamic";
+
 async function getLatestVehicles() {
   const { data } = await supabase
     .from("veicoli")
